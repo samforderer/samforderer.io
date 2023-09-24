@@ -38,14 +38,13 @@ section, aside, footer {
   border: 1px solid black;
   margin: 10px;
   padding: 40px;
-  max-height: 70svh;
   overflow: scroll;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr;
-  min-height: 70vh;
+  height: 100vh;
 }
 
 @media screen and (min-width: 636px) {
@@ -131,4 +130,35 @@ main {
   border-radius: 500px;
   height: 300px;
   width: 300px;
+  overflow: hidden;
+  background-size: 400% 400%;
+  background-image: linear-gradient(31deg, rgb(117, 52, 237), rgb(0, 0, 255), rgb(255, 45, 183));
+  animation-name: gradient;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 50% 100%
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 50% 100%
+
+  }
+}
+
+.face {
+  animation: mymove 10s infinite;
+}
+
+@keyframes mymove {
+  0%{ transform: translate(0px, 0);}
+  50% {transform: translate(5px, 0);}
+  100% { transform: translate(0px, 0);}
+
 }

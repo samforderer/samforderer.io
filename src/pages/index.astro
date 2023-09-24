@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Sam Forderer";
 import { Image } from 'astro:assets';
-import blueFace from '../assets/blueface.png';
+import blueFace from '../assets/blueface.png' ;
 ---
 
 <html lang="en">
@@ -14,14 +14,24 @@ import blueFace from '../assets/blueface.png';
 		<title>home - {pageTitle}</title>
 	</head>
 		<BaseLayout pageTitle={pageTitle}>
-			<section>
+			<section class="face-card">
 				<div class="circle-box">
-					<Image src={blueFace} alt="asdf" alt="asdf" width="300"/>
+					<Image src={blueFace} alt="asdf" alt="asdf" width="300" quality="100" class="face"/>
 				</div>
-				<h1>Hi, I'm {pageTitle}.</h1>
-				<p>I am a second year software development student. I'm currently working as an IT Support Technician
-					and pursuing a co-op position in DevOps. I am crazy about tech and design and where the two intersect. Enjoy your stay!
-				</p>
+				<div>
+					<h1>Hi, I'm {pageTitle}.</h1>
+					<p>I am a second year software development student. I'm currently working as an IT Support Technician
+						and pursuing a co-op position in DevOps. I am crazy about tech and design and where the two intersect. Enjoy your stay!
+					</p>
+				</div>
 			</section>
 		</BaseLayout>
 </html>
+
+<style>
+.circle-box {
+	margin: 0 auto;
+	box-shadow: rgba(149, 157, 165, 0.5	) 0px 8px 50px;
+	border: 5px solid white;
+}
+</style>
