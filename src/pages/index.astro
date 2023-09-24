@@ -1,5 +1,8 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Sam Forderer";
+import { Image } from 'astro:assets';
+import blueFace from '../assets/blueface.png';
 ---
 
 <html lang="en">
@@ -8,18 +11,17 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>samforderer.io</title>
+		<title>home - {pageTitle}</title>
 	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
-
-		<h1>About Me</h1>
-  		<h2>... and my new Astro site!</h2>
-
-  		<p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-jj
-  		<p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-	</body>
+		<BaseLayout pageTitle={pageTitle}>
+			<section>
+				<div class="circle-box">
+					<Image src={blueFace} alt="asdf" alt="asdf" width="300"/>
+				</div>
+				<h1>Hi, I'm {pageTitle}.</h1>
+				<p>I am a second year software development student. I'm currently working as an IT Support Technician
+					and pursuing a co-op position in DevOps. I am crazy about tech and design and where the two intersect. Enjoy your stay!
+				</p>
+			</section>
+		</BaseLayout>
 </html>

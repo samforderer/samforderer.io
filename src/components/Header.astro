@@ -1,0 +1,25 @@
+---
+import Hamburger from "./Hamburger.astro";
+import Navigation from "./Navigation.astro";
+---
+
+<header>
+    <h3>samforderer.io</h3>
+    <nav><Navigation /></nav>
+    <Hamburger />
+</header>
+
+<style>
+    header{
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0px 25px 0px 25px;
+        border: 1px solid black;
+        border-radius: 8px;
+        box-sizing: border-box;
+        height: 75px;
+    }
+</style>

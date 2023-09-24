@@ -1,0 +1,13 @@
+---
+const { title, url, date} = Astro.props;
+---
+
+<li><a href={url}>{title}<small>{date.slice(0,10)}</small></a></li>
+<style>
+    small {
+    display: block;
+    }
+    a, a:visited, a:focus {
+        color: var(--accent);
+    }
+</style>

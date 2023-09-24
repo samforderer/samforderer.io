@@ -1,5 +1,23 @@
 ---
+const pageTitle = "About Me"
 
+const identity = {
+	firstName: "Sam",
+	lastName: "Forderer",
+	occupation: "Aspiring DevOps Engineer",
+	hobbies: ["Playing Guitar", "Drawing", "Reading", "Technology"],
+	country: "Canada"
+};
+
+const skills = ["HTML", "CSS", "Javascript", "Visual Design", "Programming", "Writing"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+
+const skillColor = "navy";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <html lang="en">
@@ -8,12 +26,28 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>About</title>
+		<title>{pageTitle}</title>
+		<style define:vars={{skillColor}}>
+
+		</style>
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog">Blog</a>
-		<h1>About Me</h1>
+		<BaseLayout pageTitle={pageTitle}>
+			<section>
+			<p>Here are a few facts about me:</p>
+			<ul>
+				<li>My name is {identity.firstName}.</li>
+				<li>I live in {identity.country}.</li>
+				<li>Two of my hobbies are {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+			</ul>
+			<p>My skills are:</p>
+			<ul>
+				{skills.map((skill) => <li class="skill">{skill}</li>)}
+			</ul>
+			{happy && <p>I am happy to be learning astro!</p>}
+			{finished && <p>I finished this tutorial!</p>}
+			{goal === 3 ? <p>My goal is to be finished in 3 days.</p> : <p>My goal is not 3 days.</p>}
+		</section>
+		</BaseLayout>
 	</body>
 </html>
