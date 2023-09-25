@@ -7,17 +7,30 @@ import Social from '../components/Social.astro';
     <Social platform="github" username="samforderer" />
     <Social platform="linkedin" username="in/sam-forderer-652125148" />
     <p/>
-    <p class="end">samforderer.io © 2023</p>
+    <p>samforderer.io © 2023</p>
 </footer>
 
 <style>
     footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     color: white;
     background-color: black;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 25px
     } 
+
+    footer p {
+        margin: 0;
+        padding: 0;
+    }
+
+    @media screen and (min-width: 636px) {
+       footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 25px 10px 25px;
+       } 
+    }
 </style>

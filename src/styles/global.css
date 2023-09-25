@@ -3,6 +3,8 @@
 :root {
   --accent: #0047FF;
 }
+
+/* primary styles */
 html {
   background-color: white;
   color: black;
@@ -11,10 +13,8 @@ html {
 
 body {
   margin: 0 auto;
-  max-width: 100ch;
-  padding: 1rem;
-  line-height: 1.5;
-  min-height: 100vh;
+  line-height: 2.2;
+  max-width: 1400px;
 }
 
 * {
@@ -23,7 +23,20 @@ body {
 
 h1 {
   margin: 0rem 0;
-  font-size: 2.5rem;
+  font-size: 10vW;
+  font-weight: 300;
+  line-height: 1.5;
+}
+@media screen and (min-width: 434px){
+  h1 {
+    font-size: 6vw; 
+  }
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3vw;
+    line-height: normal
+  } 
 }
 h2 {
   margin:0;
@@ -33,18 +46,17 @@ a {
     margin-right: 10px;
 }
 
-section, aside, footer {
-  border-radius: 8px;
+section, aside, footer, header {
+  border-radius: 25px;
   border: 1px solid black;
-  margin: 10px;
-  padding: 40px;
-  overflow: scroll;
+  padding: 0 10%;
+  margin: 1ch;
+  box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 50px 0px;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr;
-  height: 100vh;
 }
 
 @media screen and (min-width: 636px) {
@@ -52,11 +64,26 @@ main {
     grid-template-columns: 2fr 1fr;
     height: 100%;
   }
+  .col-2 {
+    width: 50%;
+  }
+
+}
+.col-2 {
+  width: 100%;
 }
 
+
 /* Nav Style */ 
+
+/* nav expand styles */
 .disappear {
   display: none; 
+}
+
+.hamburger .line.shift-left {
+  transform: translate(-20px, 0px);
+  background-color: var(--accent);
 }
 
 .hamburger {
@@ -64,6 +91,7 @@ main {
   margin: 0;
   padding: 0;
   transition: 0.2s;
+  animation-timing-function: ease-in-out;
   order: 1;
 }
 
@@ -74,7 +102,9 @@ main {
   margin-bottom: 10px;
   background-color: black;
   right: 0;
+  transition: 0.1s;
 }
+
 .hamburger .line.last {
   background-color: var(--accent);
   margin-bottom: 0;
@@ -125,16 +155,18 @@ main {
   }
 }
 
+/* Business Card styles */
+
 .circle-box {
   background-color: var(--accent);
   border-radius: 500px;
   height: 300px;
   width: 300px;
   overflow: hidden;
-  background-size: 400% 400%;
-  background-image: linear-gradient(31deg, rgb(117, 52, 237), rgb(0, 0, 255), rgb(255, 45, 183));
+  background-size: 200% 200%;
+  background-image: linear-gradient(50deg, rgb(117, 52, 237), rgb(0, 0, 255), rgb(255, 45, 183));
   animation-name: gradient;
-  animation-duration: 6s;
+  animation-duration: 4s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
@@ -153,12 +185,68 @@ main {
 }
 
 .face {
-  animation: mymove 10s infinite;
+  animation: mymove 10s infinite ease-in-out;
 }
 
 @keyframes mymove {
-  0%{ transform: translate(0px, 0);}
-  50% {transform: translate(5px, 0);}
-  100% { transform: translate(0px, 0);}
+  0%{ transform: translate(-20px, 0);}
+  50% {transform: translate(0px, 0);}
+  100% { transform: translate(-20px, 0);}
 
+}
+
+
+/* layout styles */
+
+.circle-box {
+	box-shadow: rgba(149, 157, 165, 0.5	) 0px 8px 50px;
+	border: 5px solid white;
+	width: 200px;
+	height: 200px;
+}
+
+img {
+	height: auto;
+	width: 200px;
+}
+
+.face-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+@media screen and (min-width: 800px) {
+	.circle-box {
+		width: 250px;
+		height: 250px;
+	}
+	img {
+		width: 250px;
+	}
+	.face-card {
+		padding: 20px;
+	}
+	.col-2 {
+		width: 75%;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.circle-box {
+		width: 300px;
+		height: 300px;
+	}
+	img {
+		width: 300px;
+	}
+	.face-card {
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 80px;
+	}
+	.col-2 {
+		width: 50%;
+	}
 }

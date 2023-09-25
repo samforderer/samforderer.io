@@ -2,12 +2,30 @@
 const { title, url, date} = Astro.props;
 ---
 
-<li><a href={url}>{title}<small>{date.slice(0,10)}</small></a></li>
+<li><a href={url}>{title}</a><small>{date.slice(0,10)}</small></li>
 <style>
     small {
     display: block;
     }
     a, a:visited, a:focus {
         color: var(--accent);
+        transition: 0.1s;
+    }
+    a:hover {
+        color: rgb(122, 169, 255);
+    }
+
+    @media screen and (min-width: 1000px) {
+        li {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        small {
+        display: inline-block;
+        color: grey;
+        }
     }
 </style>
