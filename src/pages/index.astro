@@ -11,6 +11,7 @@ import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
 import { Image } from 'astro:assets';
 import computerImage from '../assets/images/computer3d.png'
+import Button from "@components/Button.astro";
 
 const posts = await getCollection("blog");
 
@@ -28,6 +29,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <div>
         <h1>blackbox</h1>
         <p>a blog about software engineering and people</p>
+        <Button href="/posts" text="read posts"></Button>
       </div>
       <Image 
         src={computerImage} 
@@ -40,7 +42,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         Hi, I'm Sam Forderer. I am a software development student currently working a co-op as an junior application developer. 
         I'm obsessed with all things compsci and made this blog to document my learning journey. 
       </p>
-      <p>things that excite me:</p>
+      <p><strong>things that excite me:</strong></p>
       <ul>
         <li>🐧 nix</li>
         <li>⌨️ vim</li>
@@ -141,7 +143,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
   }
   #hero p {
-    @apply my-2;
+    @apply my-4;
   }
   .social-wrapper {
     @apply mt-4 flex flex-col sm:flex-row sm:items-center;
@@ -151,6 +153,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   }
   #text-column {
     @apply order-2 sm:order-1;
+  }
+  #text-column p {
+    @apply my-4;
   }
   img {
     @apply order-1 sm:order-2;
