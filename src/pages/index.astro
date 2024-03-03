@@ -25,12 +25,22 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
+      <div>
+        <h1>blackbox</h1>
+        <p>a blog about software engineering and people</p>
+      </div>
+      <Image 
+        src={computerImage} 
+        alt="computer" 
+      />
+    </section>
+    <section id="about">
       <div id="text-column" >
       <p>
         Hi, I'm Sam Forderer. I am a software development student currently working a co-op as an junior application developer. 
         I'm obsessed with all things compsci and made this blog to document my learning journey. 
       </p>
-      <p>my interests:</p>
+      <p>things that excite me:</p>
       <ul>
         <li>🐧 nix</li>
         <li>⌨️ vim</li>
@@ -38,6 +48,16 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         <li>☸️ buddhism</li>
         <li>🎹 music</li>
       </ul>
+      <p>
+      <LinkButton href="/about/" className="link-button">
+        more about me
+          <svg xmlns="http://www.w3.org/2000/svg"
+            ><path
+              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+            ></path>
+          </svg>
+      </LinkButton>
+      </p>
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
@@ -48,12 +68,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         )
       }
       </div>
-      <Image 
-        src={computerImage} 
-        alt="computer" 
-      />
-    </section>
-
+    </section> 
     <Hr />
 
     {
