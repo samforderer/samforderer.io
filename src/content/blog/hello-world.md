@@ -13,14 +13,13 @@ ogImage: ""
 description: Some introductory thoughts and an explanation of the name, blackbox. 
 ---
 
-## the name
 A blackbox is a term for a system that takes inputs and gives an output, without the user knowing how the output was achieved. It's opaque, you cant see inside of it. As far as the user is concerned, it works like *magic*. Computing systems are built from layers upon layers of abstraction. So anytime you are interacting with a computer system, you are interacting with some form of a blackbox. The part of the blackbox the user interacts with is called an *interface*. The interface provides us a simplified control panel to interact with the blackbox and receive an output without having to understand all the nitty gritty details. I think this metaphor of a blackbox is really profound and can be applied to almost anything in life. 
 
 In a way, even human beings are blackboxes. We take sensory inputs, and produce outputs, most of the time without fully understanding the internal workings of our own mind. So, what better name for a blog about computing and people than **blackbox.** The logo is pretty obviously a blackbox taking two inputs and producing an output using some kind of computational magic. Which brings me to my next idea..
 ## the magic
 A key theme here is the idea of magic. The fact that we don't fully understand how the output is produced gives us a sense of mystery and wonder. In life, not just programming, it's crucial to maintain this sense of awe and magic. Sometimes, being too analytical and mathematical can strip away the joy and wonder from our experiences. Maintaining this magic is a core philosophy of mine. I think to be great we have to be **constantly learning**. But learning new things is hard and willpower is fragile. Fascination and curiosity are the most powerful motivators and the fuel we need to be great.  
 
-This theme of magic also relates to my fascination with computers. There's a quote by Johnny Ive that I think captures it well:
+This theme of magic also relates to my fascination with computers. There's a quote by Jony Ive that I think captures it well:
 
 > 'People perceive value beyond their ability to articulate why.' 
 
@@ -41,4 +40,4 @@ So, anyway, aside from all my philosophical ramblings, here is what I plan to wr
 - to post about hard problems I encounter so I can remember solutions 
 - to share thoughts about life
 
-Thanks for stopping by and hope you visit again soon!
+Thanks for stopping by and hope you visit again soon!## the name
